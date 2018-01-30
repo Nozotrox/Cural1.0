@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addGeral</class>
+ <widget class="QDialog" name="addGeral">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>617</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="gadoGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>261</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Gado</string>
+   </property>
+   <widget class="QSplitter" name="splitter_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="totalLabel">
+     <property name="text">
+      <string>Total:</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="totalSpinBox"/>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>115</width>
+      <height>72</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QLabel" name="categoriaLabel">
+        <property name="text">
+         <string>Categoria: </string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="categoriaComboBox">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Boi</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vaca</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Touro</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vitelo</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>18</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QLabel" name="sexoLabel">
+        <property name="text">
+         <string>Sexo:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="sexoComboBox">
+        <item>
+         <property name="text">
+          <string>M</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>F</string>
+         </property>
+        </item>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>236</width>
+      <height>69</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>18</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="nascidoCheckBox">
+       <property name="text">
+        <string>Nascido</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="tristate">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QLabel" name="dataNascimentoLabel">
+        <property name="text">
+         <string>Data de Nascimento:</string>
+        </property>
+       </widget>
+       <widget class="QDateTimeEdit" name="dataNascimentoDateTime">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>splitter</zorder>
+   <zorder>splitter_2</zorder>
+   <zorder>nascidoCheckBox</zorder>
+   <zorder>splitter_3</zorder>
+   <zorder>splitter_4</zorder>
+   <zorder>verticalSpacer</zorder>
+   <zorder>verticalSpacer_2</zorder>
+   <zorder>verticalSpacer_3</zorder>
+   <zorder>splitter_3</zorder>
+  </widget>
+  <widget class="QCheckBox" name="acontecimentoCheckBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>280</y>
+     <width>101</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Acontecimento</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="acontecimentoGroupBox">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>271</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Acontecimento</string>
+   </property>
+   <widget class="QSplitter" name="splitter_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>241</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="dataAcontecimentoLabel">
+     <property name="text">
+      <string>Data do Acontecimento</string>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="dataAcontecimentoDateTime"/>
+   </widget>
+   <widget class="QSplitter" name="splitter_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>152</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QLabel" name="acontecimentoLabel">
+     <property name="text">
+      <string>Acontecimento</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="acontecimentoComboBox">
+     <item>
+      <property name="text">
+       <string>Morte</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Retirada</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Nascimento</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ferimento</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Roubo</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>231</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QLabel" name="descricaoLabel">
+     <property name="text">
+      <string>Descricao:</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="descricaoTextEdit"/>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="adicionarPushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>580</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Adicionar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="limparPushButton">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>580</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Limpar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelarPushButton">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>580</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

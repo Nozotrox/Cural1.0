@@ -24,6 +24,8 @@ class toViewCategories(QDialog,ViewCategories.Ui_EditGeralDialog):
         self.selectionFunctionality()
         self.setModelToComboBoxes()
 #         self.nomeLineEdit.setDisabled(True)
+
+        self.list_of_widgtes_to_toggle = [self.acontecimentoComboBox, self.acontecimentoDateTime, self.descricaoPlainTextEdit]
         
     
     def setDB(self):
@@ -51,7 +53,6 @@ class toViewCategories(QDialog,ViewCategories.Ui_EditGeralDialog):
         for x in range(int(self.second_model.model.rowCount())):
             self.index_gado_in_log.append(self.second_model.model.record(x).value(2))
         self.index_gado_in_log.sort()
-        print(self.index_gado_in_log)
         
         
     def selectionFunctionality(self):
@@ -97,6 +98,14 @@ class toViewCategories(QDialog,ViewCategories.Ui_EditGeralDialog):
             value = self.second_model.model.record(correspondingRow).value(3)
             """ Update the data_acontecimento DateTimeEdit"""
             src.setTxtToWidget(widget = self.acontecimentoDateTime, val = value)
+        
+        if self.currentItemId in self.index_gado_in_log:
+            for widget in self.list_of_widgtes_to_toggle:
+                widget.setEnabled(True)
+        
+        else:
+            for widget in self.list_of_widgtes_to_toggle:
+                widget.setEnabled(False)
 
 
     def submit(self):
@@ -114,10 +123,25 @@ class toViewCategories(QDialog,ViewCategories.Ui_EditGeralDialog):
         sql.updateVal(tblName = table_name, lstNames = lstNames, lstVals = lstVal, lstQuot = lstQuote, cond = cond, conVal = condVal)
         
         
+        """::>> Submit for fields of tbl_log"""
+        if self.currentItemId in self.index_gado_in_log:
+            table_name = 'tbl_log'
+            lstNames = ['id_acontecimento','id_gado','data_acontecimento','descricao']
+            lstVal = [self.acontecimentoComboBox.currentIndex() + 1,
+                      self.currentItemId,
+                      src.getText(self.dataDateTimeEdit),
+                      src.getText(self.descricaoPlainTextEdit)]
+            
+            lstQuote = [False, False, True, True]
+            cond = 'id_gado'
+            condVal = self.currentItemId
+            
+            sql.updateVal(tblName = table_name, lstNames = lstNames, lstVals = lstVal, lstQuot = lstVal, cond = cond, conVal = condVal)
+
+            
         
 # if __name__ == "__main__":     
 #     app = QApplication(sys.argv)
 #     formMain = toViewCategories()
 #     app.setStyle(QStyleFactory.create("Fusion"))
 #     formMain.exec_()
-     

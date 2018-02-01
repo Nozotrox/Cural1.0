@@ -1,10 +1,11 @@
-from GeneratedFiles import addToGeral
+import addToGeral
 from PyQt5.QtWidgets import *
 import con_
 import srcPlus as src
 import FuncSQL as sql
 import sys
 from GenericIntroducoes import GenericIntroducao
+from toEditNovo import toEditNovo
 
 
 class toIntroducaoGeral(addToGeral.Ui_addGeral, GenericIntroducao):
@@ -113,5 +114,9 @@ class toIntroducaoGeral(addToGeral.Ui_addGeral, GenericIntroducao):
         
         portions[0] = sqlFormat
         return " ".join(portions)
-        
-        
+    
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     form = toEditNovo()
+#     form.exec_()
+#         

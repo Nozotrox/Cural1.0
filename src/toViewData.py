@@ -13,8 +13,12 @@ from toAddNovo import toAddNovo
 from toAddMortos import toAddMortos
 from toAddRetiradas import toAddRetirados
 from toViewCategories import toViewCategories
+from toEditNovo import toEditNovo
+from toEditMortos import toEditMortos
+from toEditRetirada import toEditRetirada
 import sys
 from PyQt5.QtWidgets import *
+import toEditMortos
 #Set TO Null after a change
 #self.clickedVal
 #
@@ -34,6 +38,9 @@ class toViewData(scriptGado, Ui_Form):
         self.PBAddIM.clicked.connect(self._teste_)
         self.PBAddIN.clicked.connect(self._teste_)
         self.PBEditIG.clicked.connect(self._teste_)
+        self.PBEditIN.clicked.connect(self._teste_)
+        self.PBEditIM.clicked.connect(self._teste_)
+        self.PBEditIR.clicked.connect(self._teste_)
         
     def openToInsert(self):
         objName = self.sender().objectName()
@@ -63,8 +70,8 @@ class toViewData(scriptGado, Ui_Form):
         sender = self.sender().objectName()
         
         if sender == 'PBAddIR':
-            frmAcontecimento = toAcontecimentos()
-            frmAcontecimento.exec_()
+            frmRetirados = toAddRetirados()
+            frmRetirados.exec_()
         
         elif sender == 'PBAddIG':
             frmGeral = toIntroducaoGeral()
@@ -76,11 +83,24 @@ class toViewData(scriptGado, Ui_Form):
         
         elif sender == 'PBAddIM':
             frmMortos = toAddMortos()
-            frmMortos.exec_()
+            frmMortos.exec_()         
             
         elif sender == 'PBEditIG':
             frmGeral = toViewCategories()#Name is not related, i know, i'll change
             frmGeral.exec_()
+        
+        elif sender == 'PBEditIN':
+            frmEdit = toEditNovo()
+            frmEdit.exec_()
+            
+        elif sender == 'PBEditIR':
+            frmRetirados = toEditRetirada()
+            frmRetirados.exec_()
+            
+        elif sender == 'PBEditIM':
+            frmMortos = toEditMortos.toEditMortos()
+            frmMortos.exec_()
+        
 
     def setDicts(self):
         self.dictFields={

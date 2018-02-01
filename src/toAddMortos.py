@@ -1,4 +1,4 @@
-from GeneratedFiles import addToMortos
+import addToMortos
 from PyQt5.QtWidgets import *
 import con_
 import srcPlus as src

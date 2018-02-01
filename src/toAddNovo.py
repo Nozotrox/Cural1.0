@@ -1,4 +1,4 @@
-from GeneratedFiles import addToNovo
+import addToNovo
 from PyQt5.QtWidgets import *
 import con_
 import srcPlus as src
@@ -125,8 +125,8 @@ class toAddNovo(QDialog, addToNovo.Ui_addToNovo):
         
         
  
-if __name__=="__main__":
-    app = QApplication(sys.argv)
-    app.setStyle(QStyleFactory.create("fusion"))
-    form = toAddNovo()
-    form.exec_()
+# if __name__=="__main__":
+#     app = QApplication(sys.argv)
+#     app.setStyle(QStyleFactory.create("fusion"))
+#     form = toAddNovo()
+#     form.exec_()

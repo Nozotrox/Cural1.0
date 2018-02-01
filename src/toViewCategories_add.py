@@ -54,10 +54,10 @@ class toViewCategories_add(QDialog, ViewCategories_add.Ui_addGeralDialog):
         
         portions[0] = sqlFormat
         return " ".join(portions)
-    
-if __name__ == "__main__":
-    
-    app = QApplication(sys.argv)
-    app.setStyle(QStyleFactory.create("Fusion"))
-    form = toViewCategories_add()
-    form.exec_()
+#     
+# if __name__ == "__main__":
+#     
+#     app = QApplication(sys.argv)
+#     app.setStyle(QStyleFactory.create("Fusion"))
+#     form = toViewCategories_add()
+#     form.exec_()

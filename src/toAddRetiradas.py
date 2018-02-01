@@ -1,4 +1,4 @@
-from GeneratedFiles import addToRetiradas
+import addToRetiradas
 from PyQt5.QtWidgets import *
 import con_
 import srcPlus as src

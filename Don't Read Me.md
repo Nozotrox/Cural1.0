@@ -1,4 +1,5 @@
 # Cural1.0
-Projecto Cural
-Fiz os widgets para adicionar e mais um para editar.
-faltam + 3 widgets e estabelecer a conecao para o TV
+# Projecto Cural
+Todos os Widgets basicos ja foram Feitos.
+Falta somente a connecao inicial
+

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Editar_Retirada</class>
+ <widget class="QDialog" name="Editar_Retirada">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>338</width>
+    <height>434</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QSplitter" name="splitter_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>406</y>
+     <width>150</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QPushButton" name="submeterPushButton">
+    <property name="text">
+     <string>Submeter</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancelarPushButton">
+    <property name="text">
+     <string>Cancelar</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>321</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="splitter_10">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>272</y>
+     <width>289</width>
+     <height>122</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="descricaoLabel">
+    <property name="text">
+     <string>Descricao:</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="descricaoPlainTextEdit"/>
+  </widget>
+  <widget class="QSplitter" name="splitter_9">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>235</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QLabel" name="dataAcontecimentoLabel">
+    <property name="text">
+     <string>Data da Retirada:</string>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="dataAcontecimentoDateTime"/>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>199</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QLabel" name="idLabel">
+    <property name="text">
+     <string>Id do Gado:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="idComboBox"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
